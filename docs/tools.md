@@ -9,12 +9,13 @@ Status legend: **shipped** / **next** / **planned**.
 ## `/design-path` (the router skill)
 
 - **Lane:** all four (it's the diagnostic).
-- **Status:** planned (next).
-- **Spec:** A Claude Code skill that asks the user 2–3 questions about their current constraint, names the lane (Problem / Human / Craft / Interaction), and outputs the next concrete artifact for that lane:
-  - Problem-first → an Opportunity Solution Tree prompt + an interview-question set
-  - Human-first → a mental-model sketch template + cognitive-constraint checklist
-  - Craft-first → a design-token starter (palette + type + space + shadow scales)
-  - Interaction-first → a persona-scenario template + an excise audit checklist
+- **Status:** **shipped (v0)** — install instructions at [`skill/design-path/INSTALL.md`](../skill/design-path/INSTALL.md).
+- **Spec:** A Claude Code skill that asks the user 1–2 questions about their current constraint, names the lane (Problem / Human / Craft / Interaction), and outputs the first concrete artifact for that lane:
+  - Problem-first → outcome statement + target-customer/value-prop + Opportunity Solution Tree + story-based interview prompts
+  - Human-first → mental-model sketch + 7-stage walkthrough + cognitive-constraints checklist + 5-user test plan
+  - Craft-first → brand prompt + color/type/space/shadow scales + hierarchy-by-de-emphasis audit
+  - Interaction-first → persona-with-goal + scenario walkthrough + posture decision + excise audit
+- **v0 scope:** first artifact only. Later-stage artifacts (research synthesis, IA, etc.) are next.
 - Hands off to the more specific tools below when relevant.
 
 ## Color generator

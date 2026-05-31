@@ -17,19 +17,34 @@ Most people learning design already have access to the classic books and the pri
 
 Plus the **meta-path**: switching lanes deliberately when one constraint stops being dominant. → **[Full paths framework](docs/paths.md)**
 
+## Try it now — `/design-path` skill (alpha)
+
+A Claude Code skill that asks 1–2 questions about your current constraint, names the lane, and outputs the first concrete artifact for it (a value-prop template, a mental-model sketch, a design-token starter, or a persona-scenario walkthrough).
+
+```bash
+git clone https://github.com/mkw202/paths-to-design-.git
+mkdir -p ~/.claude/skills
+cp -r paths-to-design-/skill/design-path ~/.claude/skills/
+# Restart Claude Code, then invoke:
+/design-path
+```
+
+Full install + uninstall steps → [`skill/design-path/INSTALL.md`](skill/design-path/INSTALL.md).
+
 ## What's shipped today (alpha)
 
 - The four-paths framework + lane-switching guide → [`docs/paths.md`](docs/paths.md)
 - The product vision and three-horizon roadmap → [`docs/vision.md`](docs/vision.md)
+- **`/design-path` skill** — diagnose your lane + first artifact → [`skill/design-path/`](skill/design-path/)
 - Planned tools with concrete specs → [`docs/tools.md`](docs/tools.md)
 - 11 distilled book summaries grounding the framework → [`book-notes/`](book-notes/)
 
 ## What's coming
 
-- **`/design-path`** — a Claude Code skill: 2–3 questions → your lane + the first concrete artifact to produce.
 - **Color / typography / spacing generators** from natural-language prompts. *"Cherry blossom in Japan"* → a real palette with named colors and rationale, output in Tailwind / CSS / SwiftUI / Figma tokens.
 - **Vertical galleries** with critique callouts — restaurants, finance, legal, real estate, healthcare, e-commerce, SaaS, education. Both *what to study* and *what to avoid* in your domain.
 - **Chrome investigation** — point the assistant at your live UI's URL; get a lane-informed audit grounded in what's actually on the page (Playwright MCP / chrome-devtools-mcp under the hood).
+- **Later stages of each lane** — the v0 skill outputs the FIRST artifact; subsequent stages (research synthesis, IA, etc.) are planned.
 
 Concrete specs for each → [`docs/tools.md`](docs/tools.md).
 
