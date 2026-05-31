@@ -1,39 +1,54 @@
 # paths-to-design
 
-> Synthesized paths to UI/UX and product design — distilled book notes plus a multi-path framework for getting from a problem to a shipped interface, no matter where you start.
+> The AI-native design assistant for non-designers — engineers, founders, and PMs who ship interfaces every week without design training. There is no single right way to design a UI; there are four. paths-to-design is the routing layer that tells you which fits where you are, plus the tools to execute it.
 
-## Why this exists
+## The bet
 
-There is no single right way to learn or do UI design. A founder racing to launch starts very differently from a researcher reshaping an existing product, and they're both right — for *their* starting point. The classic books each take a strong stance, and read in the wrong order they contradict each other.
+Most people learning design already have access to the classic books and the prior art. What they don't have is **a map of when each one is right**, and the working tools that let them act on it. Build the map well, layer AI-native tools on top, and the existing literature stops contradicting itself and starts compounding.
 
-This repo synthesizes 11 of those books into **four named paths** to a final design, each with its own reading order, stage artifacts, and failure modes. Plus the meta-path: how mature practitioners cycle between them.
+→ **[Full vision](docs/vision.md)**
 
 ## The four paths
 
-1. **Problem-first** — strategy-driven. "I don't know what to build yet." (Inspired → Continuous Discovery → Lean Product Playbook → … → craft last.)
-2. **Human-first** — cognition-driven. "I know what I'm building; the job is to make it usable." (Design of Everyday Things → 100 Things → Don't Make Me Think → About Face → Refactoring UI.)
-3. **Craft-first** — artifact-driven. "I need to ship something real this week." (Refactoring UI → Thinking with Type → Grid Systems → … → validate after.)
-4. **Interaction-first** — flow-driven. "I know the goals; design the flows that achieve them." (About Face → Don't Make Me Think → Refactoring UI.)
+1. **Problem-first** — strategy-driven. *"I don't know what to build yet."*
+2. **Human-first** — cognition-driven. *"I know what I'm building; it's confusing to use."*
+3. **Craft-first** — artifact-driven. *"I need to ship something real this week."*
+4. **Interaction-first** — flow-driven. *"I know the goals; the hard part is the flows."*
 
-Plus the meta-path: switching lanes deliberately when one constraint stops being the dominant one.
+Plus the **meta-path**: switching lanes deliberately when one constraint stops being dominant. → **[Full paths framework](docs/paths.md)**
 
-→ **[Full paths analysis](docs/paths.md)**
+## What's shipped today (alpha)
 
-## What's in here
+- The four-paths framework + lane-switching guide → [`docs/paths.md`](docs/paths.md)
+- The product vision and three-horizon roadmap → [`docs/vision.md`](docs/vision.md)
+- Planned tools with concrete specs → [`docs/tools.md`](docs/tools.md)
+- 11 distilled book summaries grounding the framework → [`book-notes/`](book-notes/)
 
-- [`docs/paths.md`](docs/paths.md) — the four paths in full: premise, reading order, stage artifacts, when to use, failure modes.
-- [`book-notes/`](book-notes/) — distilled summaries of the 11 source books (author, thesis, core ideas, named frameworks, how to apply, honest caveats).
-- `docs/glossary.md` *(coming)* — the working vocabulary across the books (affordance, signifier, gulfs, posture, appetite, Kano, hill chart, …).
-- `skill/` *(coming)* — a Claude Code skill that asks a few questions about your current constraint and recommends the path that fits.
+## What's coming
 
-## Status
+- **`/design-path`** — a Claude Code skill: 2–3 questions → your lane + the first concrete artifact to produce.
+- **Color / typography / spacing generators** from natural-language prompts. *"Cherry blossom in Japan"* → a real palette with named colors and rationale, output in Tailwind / CSS / SwiftUI / Figma tokens.
+- **Vertical galleries** with critique callouts — restaurants, finance, legal, real estate, healthcare, e-commerce, SaaS, education. Both *what to study* and *what to avoid* in your domain.
+- **Chrome investigation** — point the assistant at your live UI's URL; get a lane-informed audit grounded in what's actually on the page (Playwright MCP / chrome-devtools-mcp under the hood).
 
-Alpha. Book notes are stable; the four-path framework is v0; the skill doesn't exist yet. PRs and corrections welcome — especially from practicing designers who disagree with how a book has been routed.
+Concrete specs for each → [`docs/tools.md`](docs/tools.md).
+
+## What this is, and isn't
+
+**Is:** an opinionated routing layer + AI-native tools that produce concrete artifacts. Every tool maps to one or more of the four paths.
+
+**Isn't:** a design school. A portfolio platform. A hiring replacement. A certification body. Not opinionated about brutalism vs. glass vs. Swiss — that's your call; the generators output tokens for whatever style you point them at.
 
 ## License
 
-MIT. Use, fork, remix, ship. Attribution appreciated but not required.
+MIT. Use, fork, remix, ship.
 
 ## Contributing
 
-Open an issue or a PR. The bar is "would this help someone find their path faster, or correct one I've gotten wrong?"
+Open an issue or a PR. The bar is *"would this help someone find their path faster, correct one I've gotten wrong, or contribute a vertical sample with a real critique callout?"*
+
+Especially welcome:
+- Practicing designers who disagree with how a book has been routed.
+- Vertical-gallery contributions (one entry per PR, with what's working / what's broken / screenshot / link).
+- Generator improvements (better palette naming, more output formats, image-reference extraction).
+- Lane-specific Chrome audit rules grounded in the framework.

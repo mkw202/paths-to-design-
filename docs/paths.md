@@ -190,10 +190,17 @@ The mature move is **naming which lane you're in out loud**, so the team can cal
 
 ---
 
-## What's next in this repo
+## How this framework powers the tools
 
-- `docs/glossary.md` — the shared vocabulary across all four paths (affordance, signifier, gulfs, posture, appetite, Kano, hill chart, …).
-- `skill/` — a Claude Code skill that asks 3 questions about your current constraint, names the lane you're in, and recommends the next artifact you should produce.
-- `case-studies/` — worked examples of a real product travelling through each path.
+The four paths aren't a reading list — they're the **architecture** of the assistant being built on top. Every planned tool maps to one or more lanes:
 
-Contributions welcome. If you think a book belongs on a different path, or a path is missing, open a PR.
+- The **router skill** (`/design-path`) asks 2–3 questions to name your lane and produce the first artifact.
+- **Color / typography / spacing generators** serve Craft-first directly (and Path B/D once they've made it to the visual stage).
+- The **vertical gallery** serves all four — different lanes look for different things in a reference.
+- **Chrome investigation** audits a deployed UI against the lane's specific checklist.
+
+See [`docs/vision.md`](vision.md) for the full product shape and [`docs/tools.md`](tools.md) for concrete tool specs.
+
+## Contributing
+
+If you think a book belongs on a different path, or a path is missing, open a PR. Especially welcome from practicing designers who disagree with the routing.
